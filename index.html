@@ -589,21 +589,9 @@
         <div class="container">
             <h2>Let's Create Something Beautiful</h2>
             <p>Start a conversation about your digital presence</p>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+            <div style="margin-top: 3rem;">
+                <a href="https://calendly.com/ranaburhan08/30min" target="_blank" class="btn">Book a Demo</a>
+            </div>
         </div>
     </section>
 
@@ -642,13 +630,6 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
-        });
-
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message. We will respond within 24 hours.');
-            this.reset();
         });
 
         // Intersection Observer for fade-in animations
