@@ -1,0 +1,11 @@
+{
+  "name": "ai-seo-marketing-agency",
+  "version": "1.0.0",
+  "description": "AI SEO Marketing Agency Website",
+  "scripts": {
+    "start": "npx serve -s ."
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  }
+}
