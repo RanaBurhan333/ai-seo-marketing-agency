@@ -1,190 +1,605 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8D1843HF21"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8D1843HF21');
-    </script>
-    <!-- End Google Analytics -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clarity AI | SEO Marketing Refined</title>
+    <title>Klyne - Branding Agency for Doctors | Medical Marketing Experts</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Klyne helps medical practices get more patients with video marketing, SEO, and review management. 12 videos monthly, top Google rankings, 20+ reviews guaranteed.">
+    <meta name="keywords" content="medical marketing, doctor marketing agency, healthcare SEO, medical practice growth, patient acquisition">
+    <meta name="author" content="Klyne Agency">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Klyne - Branding Agency for Doctors">
+    <meta property="og:description" content="Your expertise. Amplified. Get more patients with professional video marketing and SEO.">
+    <meta property="og:image" content="https://yourwebsite.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:title" content="Klyne - Branding Agency for Doctors">
+    <meta property="twitter:description" content="Your expertise. Amplified. Get more patients with professional video marketing and SEO.">
+    <meta property="twitter:image" content="https://yourwebsite.com/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com/">
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR-VERIFICATION-CODE-HERE" />
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         :root {
-            --white: #FFFFFF;
-            --pure-white: #FAFAFA;
-            --warm-beige: #F5F2ED;
-            --light-beige: #E8E2D5;
-            --medium-beige: #D4C4B0;
-            --dark-beige: #AA9A84;
-            --text-primary: #2C2825;
-            --text-secondary: #6B635A;
+            /* Colors */
+            --bg: #F5F5F7;
+            --surface: #FFFFFF;
+            --text-strong: #1D1D1F;
+            --text-muted: #515154;
+            --accent: #6C5CE7;
+            --accent-dark: #5B4BD6;
+            --accent-light: #E8E5FF;
+            --shadow: rgba(16,24,40,0.06);
+            --shadow-hover: rgba(16,24,40,0.12);
+            
+            /* Typography */
+            --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            --font-size-h1: 56px;
+            --font-size-h2: 36px;
+            --font-size-body: 18px;
+            --font-size-nav: 14px;
+            
+            /* Spacing */
+            --space-hero: 160px;
+            --space-section: 120px;
+            --space-container-max: 1200px;
         }
-
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
-            color: var(--text-primary);
-            background: var(--pure-white);
+            font-family: var(--font-family);
             line-height: 1.6;
+            color: var(--text-strong);
+            background: var(--bg);
+            font-size: var(--font-size-body);
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
-
-        /* Typography */
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 200;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
+        
+        .container {
+            max-width: var(--space-container-max);
+            margin: 0 auto;
+            padding: 0 40px;
         }
-
-        h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 300;
-            letter-spacing: -0.01em;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        p {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            font-weight: 300;
-        }
-
+        
         /* Navigation */
         nav {
             position: fixed;
             top: 0;
-            width: 100%;
-            padding: 1.5rem 5%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            left: 0;
+            right: 0;
+            background: var(--surface);
             z-index: 1000;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 20px 0;
+            transition: all 0.3s ease;
         }
-
+        
         nav.scrolled {
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px var(--shadow);
         }
-
+        
         .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 300;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 30px;
         }
-
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
         .nav-links {
             display: flex;
-            gap: 3rem;
+            gap: 40px;
             list-style: none;
+            align-items: center;
         }
-
+        
         .nav-links a {
-            color: var(--text-secondary);
             text-decoration: none;
-            font-size: 1rem;
-            font-weight: 300;
-            transition: color 0.3s ease;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: var(--font-size-nav);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: color 0.3s;
             position: relative;
+            padding-bottom: 4px;
         }
-
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
+        
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -4px;
+            bottom: 0;
             left: 0;
             width: 0;
-            height: 1px;
-            background: var(--text-primary);
+            height: 2px;
+            background: var(--accent);
             transition: width 0.3s ease;
         }
-
-        .nav-links a:hover::after {
+        
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
             width: 100%;
         }
-
+        
+        .nav-links a:hover {
+            color: var(--text-strong);
+        }
+        
+        .phone-header {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .phone-header:hover {
+            color: var(--accent);
+        }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .mobile-menu span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-strong);
+            transition: 0.3s;
+        }
+        
         /* Hero Section */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 0 5%;
-            background: linear-gradient(135deg, var(--pure-white) 0%, var(--warm-beige) 100%);
+            padding: var(--space-hero) 0;
+            text-align: center;
             position: relative;
-            overflow: hidden;
         }
-
+        
         .hero-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-text {
             opacity: 0;
             animation: fadeInUp 1s ease forwards;
         }
-
-        .hero-visual {
-            position: relative;
+        
+        h1 {
+            font-size: var(--font-size-h1);
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtext {
+            font-size: 20px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 48px;
+            line-height: 1.5;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--surface);
+            padding: 16px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(108, 92, 231, 0.3);
+        }
+        
+        .proof-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 80px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .proof-point {
+            text-align: center;
+            padding: 40px 30px;
+            background: var(--surface);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             opacity: 0;
-            animation: fadeInUp 1s ease 0.2s forwards;
+            animation: fadeInUp 0.8s ease forwards;
         }
-
-        .floating-orb {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle at 30% 30%, var(--white), var(--light-beige));
+        
+        .proof-point:nth-child(1) { animation-delay: 0.2s; }
+        .proof-point:nth-child(2) { animation-delay: 0.4s; }
+        .proof-point:nth-child(3) { animation-delay: 0.6s; }
+        
+        .proof-point:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px var(--shadow-hover);
+        }
+        
+        .proof-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent-light);
+            border-radius: 12px;
+            font-size: 24px;
+        }
+        
+        .proof-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .proof-text {
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+        
+        /* Section styling */
+        section {
+            padding: var(--space-section) 0;
+            position: relative;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        section:nth-child(even) {
+            background: var(--surface);
+        }
+        
+        h2 {
+            font-size: var(--font-size-h2);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 60px;
+            letter-spacing: -0.01em;
+        }
+        
+        /* What We Do */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background: var(--surface);
+            padding: 48px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px var(--shadow-hover);
+        }
+        
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--accent-light);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 28px;
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        
+        /* How It Works - Timeline */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: var(--accent-light);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 0 60px;
+            margin-bottom: 60px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            text-align: right;
+            padding-right: calc(50% + 60px);
+            padding-left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            text-align: left;
+            padding-left: calc(50% + 60px);
+            padding-right: 0;
+        }
+        
+        .timeline-circle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 48px;
+            height: 48px;
+            background: var(--accent);
+            color: var(--surface);
             border-radius: 50%;
-            filter: blur(40px);
-            opacity: 0.6;
-            animation: float 20s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
         }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(30px, -30px) scale(1.05); }
-            66% { transform: translate(-20px, 20px) scale(0.95); }
+        
+        .timeline-content h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
-
+        
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+        
+        /* Packages */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .package {
+            background: var(--surface);
+            border: 2px solid transparent;
+            border-radius: 24px;
+            padding: 48px 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px var(--shadow);
+            position: relative;
+        }
+        
+        .package:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px var(--shadow-hover);
+            border-color: var(--accent);
+        }
+        
+        .package.featured {
+            border-color: var(--accent);
+        }
+        
+        .package.featured::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: var(--surface);
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .package h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .price {
+            font-size: 24px;
+            color: var(--accent);
+            font-weight: bold;
+            margin-bottom: 32px;
+        }
+        
+        .package ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+        
+        .package li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            color: var(--text-muted);
+        }
+        
+        .package li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--surface);
+            border-radius: 16px;
+            margin-bottom: 20px;
+            padding: 28px 32px;
+            box-shadow: 0 4px 20px var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 8px 30px var(--shadow-hover);
+        }
+        
+        .faq-question {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-strong);
+        }
+        
+        .faq-answer {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        /* Contact */
+        .contact {
+            text-align: center;
+            padding: var(--space-section) 0;
+            background: var(--surface);
+        }
+        
+        .contact p {
+            font-size: 24px;
+            margin-bottom: 48px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .btn-secondary {
+            color: var(--accent);
+            text-decoration: none;
+            padding: 16px 32px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+            border: 2px solid var(--accent);
+            border-radius: 30px;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: var(--surface);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text-strong);
+            color: var(--surface);
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        footer a {
+            color: var(--surface);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        footer a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -195,280 +610,66 @@
                 transform: translateY(0);
             }
         }
-
-        .subtitle {
-            color: var(--dark-beige);
-            font-size: 1.25rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-        }
-
-        .hero-description {
-            margin: 2rem 0;
-            max-width: 500px;
-        }
-
-        /* Button */
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--text-primary);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 100px;
-            font-weight: 300;
-            font-size: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid var(--text-primary);
-        }
-
-        .btn:hover {
-            background: transparent;
-            color: var(--text-primary);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            margin-left: 1rem;
-        }
-
-        .btn-secondary:hover {
-            background: var(--text-primary);
-            color: var(--white);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 8rem 5%;
-            background: var(--white);
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-
-        .service-card {
-            background: var(--warm-beige);
-            padding: 3rem;
-            border-radius: 20px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--medium-beige), var(--dark-beige));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--white);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        /* Philosophy Section */
-        .philosophy {
-            padding: 8rem 5%;
-            background: linear-gradient(180deg, var(--warm-beige) 0%, var(--white) 100%);
-        }
-
-        .philosophy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 4rem;
-            margin-top: 4rem;
-        }
-
-        .philosophy-item {
-            text-align: center;
-            opacity: 0;
-            animation: fadeIn 0.8s ease forwards;
-            animation-delay: calc(var(--i) * 0.1s);
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .philosophy-number {
-            font-size: 3rem;
-            font-weight: 100;
-            color: var(--light-beige);
-            margin-bottom: 1rem;
-        }
-
-        /* Results Section */
-        .results {
-            padding: 8rem 5%;
-            background: var(--white);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 2rem;
-            background: var(--warm-beige);
-            border-radius: 20px;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 200;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 1rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 8rem 5%;
-            background: var(--warm-beige);
-            text-align: center;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 3rem auto 0;
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-secondary);
-            font-weight: 300;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid var(--light-beige);
-            border-radius: 12px;
-            background: var(--white);
-            font-family: inherit;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--medium-beige);
-        }
-
-        /* Footer */
-        footer {
-            padding: 3rem 5%;
-            background: var(--text-primary);
-            color: var(--white);
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-            list-style: none;
-        }
-
-        .footer-links a {
-            color: var(--light-beige);
-            text-decoration: none;
-            font-weight: 300;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--white);
-        }
-
+        
         /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-visual {
-                display: none;
-            }
-
-            .philosophy-grid,
+        @media (max-width: 1024px) {
             .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .nav-right {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: flex;
+            }
+            
+            h1 {
+                font-size: 40px;
+            }
+            
+            h2 {
+                font-size: 32px;
+            }
+            
+            .proof-points {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .services-grid,
+            .packages-grid {
                 grid-template-columns: 1fr;
             }
-
-            h1 {
-                font-size: 2.5rem;
+            
+            /* Mobile Timeline */
+            .timeline::before {
+                left: 30px;
             }
-
-            h2 {
-                font-size: 2rem;
+            
+            .timeline-item {
+                padding-left: 80px !important;
+                padding-right: 0 !important;
+                text-align: left !important;
+            }
+            
+            .timeline-circle {
+                left: 30px !important;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .hero {
+                padding: 120px 0;
             }
         }
     </style>
@@ -476,148 +677,244 @@
 <body>
     <!-- Navigation -->
     <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">Clarity AI</div>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#results">Results</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="container nav-container">
+            <div class="nav-left">
+                <div class="logo">Klyne</div>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#how" class="nav-link">Process</a></li>
+                    <li><a href="#packages" class="nav-link">Pricing</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+                <!-- TODO: Replace with your actual phone number -->
+                <a href="tel:+1234567890" class="phone-header">📞 (123) 456-7890</a>
+            </div>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="subtitle">Precision in Every Algorithm</p>
-                <h1>SEO Marketing<br>Thoughtfully Refined</h1>
-                <p class="hero-description">
-                    We believe in the power of simplicity. Our AI-driven approach removes complexity, 
-                    leaving only what matters: genuine growth and meaningful connections with your audience.
-                </p>
-                <a href="#contact" class="btn">Begin Your Journey</a>
-                <a href="#services" class="btn btn-secondary">Explore Services</a>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your expertise. Amplified.</h1>
+                <p class="subtext">Short videos. High rankings. Full calendars.</p>
+                <!-- TODO: Replace # with your Calendly or form URL -->
+                <a href="#" class="btn-primary">Start Growing Today</a>
             </div>
-            <div class="hero-visual">
-                <div class="floating-orb"></div>
+            
+            <div class="proof-points">
+                <div class="proof-point">
+                    <div class="proof-icon">📹</div>
+                    <span class="proof-number">12</span>
+                    <span class="proof-text">Videos monthly</span>
+                </div>
+                <div class="proof-point">
+                    <div class="proof-icon">🏆</div>
+                    <span class="proof-number">Top 3</span>
+                    <span class="proof-text">Google rankings</span>
+                </div>
+                <div class="proof-point">
+                    <div class="proof-icon">⭐</div>
+                    <span class="proof-number">20+</span>
+                    <span class="proof-text">New reviews</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <!-- What We Do -->
+    <section id="services" class="fade-in">
         <div class="container">
-            <div class="section-header">
-                <h2>Services Crafted with Purpose</h2>
-                <p>Every solution is meticulously designed to be invisible yet indispensable</p>
-            </div>
+            <h2>Services That Drive Results</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Strategic SEO</h3>
-                    <p>AI-powered keyword research and content optimization that feels natural, never forced. We focus on authentic ranking improvements that last.</p>
+                    <div class="service-icon">📱</div>
+                    <h3>Video Marketing</h3>
+                    <p>Professional videos. Zero hassle. Posted everywhere.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Content Intelligence</h3>
-                    <p>Machine learning algorithms analyze and create content that resonates. Every word serves a purpose, every paragraph drives engagement.</p>
+                    <div class="service-icon">💻</div>
+                    <h3>Website Design</h3>
+                    <p>Fast. Beautiful. Booking-optimized.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔍</div>
-                    <h3>Technical Excellence</h3>
-                    <p>Site architecture and performance optimization executed with surgical precision. Fast, clean, and effortlessly functional.</p>
+                    <h3>SEO & Google</h3>
+                    <p>Rank higher. Get found first.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⭐</div>
+                    <h3>Review Management</h3>
+                    <p>5-star reviews. On autopilot.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📢</div>
+                    <h3>Paid Advertising</h3>
+                    <p>Target patients. Maximize ROI.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📧</div>
+                    <h3>Email & SMS</h3>
+                    <p>Fill schedules. Build loyalty.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Philosophy Section -->
-    <section class="philosophy" id="philosophy">
+    <!-- How It Works -->
+    <section id="how" class="fade-in">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Design Philosophy</h2>
-                <p>Inspired by the principles that transformed technology</p>
-            </div>
-            <div class="philosophy-grid">
-                <div class="philosophy-item" style="--i: 1">
-                    <div class="philosophy-number">01</div>
-                    <h3>Less, but Better</h3>
-                    <p>We strip away the unnecessary, focusing only on strategies that deliver measurable impact.</p>
+            <h2>Simple Process. Big Results.</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-circle">1</div>
+                    <div class="timeline-content">
+                        <h3>Strategy Call</h3>
+                        <p>30 minutes. Clear goals. Custom plan.</p>
+                    </div>
                 </div>
-                <div class="philosophy-item" style="--i: 2">
-                    <div class="philosophy-number">02</div>
-                    <h3>User-Centric Always</h3>
-                    <p>Every optimization enhances the user journey, creating experiences that feel intuitive and natural.</p>
+                <div class="timeline-item">
+                    <div class="timeline-circle">2</div>
+                    <div class="timeline-content">
+                        <h3>Content Day</h3>
+                        <p>2 hours. Multiple videos. Done.</p>
+                    </div>
                 </div>
-                <div class="philosophy-item" style="--i: 3">
-                    <div class="philosophy-number">03</div>
-                    <h3>Honest & Transparent</h3>
-                    <p>We never exaggerate capabilities. Our results speak through data, not promises.</p>
+                <div class="timeline-item">
+                    <div class="timeline-circle">3</div>
+                    <div class="timeline-content">
+                        <h3>We Handle Everything</h3>
+                        <p>Edit. Post. Optimize. Repeat.</p>
+                    </div>
                 </div>
-                <div class="philosophy-item" style="--i: 4">
-                    <div class="philosophy-number">04</div>
-                    <h3>Meticulous Detail</h3>
-                    <p>From meta tags to site architecture, every element is crafted with obsessive attention.</p>
+                <div class="timeline-item">
+                    <div class="timeline-circle">4</div>
+                    <div class="timeline-content">
+                        <h3>Track Success</h3>
+                        <p>More patients. Clear metrics.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Results Section -->
-    <section class="results" id="results">
+    <!-- Packages -->
+    <section id="packages" class="fade-in">
         <div class="container">
-            <div class="section-header">
-                <h2>Quietly Impressive Results</h2>
-                <p>Numbers that demonstrate the power of thoughtful optimization</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">327%</div>
-                    <div class="stat-label">Average Traffic Increase</div>
+            <h2>Choose Your Growth Plan</h2>
+            <div class="packages-grid">
+                <div class="package">
+                    <h3>Starter</h3>
+                    <p class="price">$1,500-$2,500/mo</p>
+                    <ul>
+                        <li>8 videos monthly</li>
+                        <li>Google profile setup</li>
+                        <li>Review automation</li>
+                        <li>Monthly reports</li>
+                    </ul>
+                    <!-- TODO: Replace # with your Calendly or form URL -->
+                    <a href="#" class="btn-primary">Get Started</a>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">2.4s</div>
-                    <div class="stat-label">Average Load Time</div>
+                <div class="package featured">
+                    <h3>Growth</h3>
+                    <p class="price">$3,000-$5,000/mo</p>
+                    <ul>
+                        <li>12 videos monthly</li>
+                        <li>Website included</li>
+                        <li>2 SEO pages monthly</li>
+                        <li>Email campaigns</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <!-- TODO: Replace # with your Calendly or form URL -->
+                    <a href="#" class="btn-primary">Get Started</a>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">89%</div>
-                    <div class="stat-label">Client Retention Rate</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">15:1</div>
-                    <div class="stat-label">Average ROI</div>
+                <div class="package">
+                    <h3>Leader</h3>
+                    <p class="price">$5,500-$8,000/mo</p>
+                    <ul>
+                        <li>16+ videos monthly</li>
+                        <li>Full website care</li>
+                        <li>Advanced SEO</li>
+                        <li>Paid ad management</li>
+                        <li>Podcast production</li>
+                        <li>VIP support</li>
+                    </ul>
+                    <!-- TODO: Replace # with your Calendly or form URL -->
+                    <a href="#" class="btn-primary">Get Started</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <!-- FAQ -->
+    <section id="faq" class="fade-in">
         <div class="container">
-            <h2>Let's Create Something Beautiful</h2>
-            <p>Start a conversation about your digital presence</p>
-            <div style="margin-top: 3rem;">
-                <a href="https://calendly.com/ranaburhan08/30min" target="_blank" class="btn">Book a Demo</a>
+            <h2>Common Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Time commitment?</div>
+                    <div class="faq-answer">Just 2 hours monthly. We handle the rest.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Work remotely?</div>
+                    <div class="faq-answer">Yes. We ship you a recording kit.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Build websites?</div>
+                    <div class="faq-answer">Absolutely. Fast, modern, mobile-ready.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Improve Google rankings?</div>
+                    <div class="faq-answer">Yes. Proven SEO strategies that work.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Patient privacy?</div>
+                    <div class="faq-answer">100% protected. HIPAA compliant.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">See results when?</div>
+                    <div class="faq-answer">Most practices see growth within 60-90 days.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Approve content?</div>
+                    <div class="faq-answer">You approve everything before it goes live.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact fade-in">
+        <div class="container">
+            <p>Ready to grow your practice?</p>
+            <div class="contact-buttons">
+                <!-- TODO: Replace # with your Calendly or form URL -->
+                <a href="#" class="btn-primary">Book Your Growth Call</a>
+                <!-- TODO: Replace with your actual phone number -->
+                <a href="tel:+1234567890" class="btn-secondary">Call Now</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Clarity AI. Thoughtfully crafted with purpose.</p>
-            <ul class="footer-links">
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Philosophy</a></li>
-            </ul>
+        <div class="container">
+            <p>&copy; 2025 Klyne - Branding Agency for Doctors. All rights reserved.</p>
+            <!-- TODO: Replace with your actual phone number -->
+            <p><a href="tel:+1234567890">📞 (123) 456-7890</a></p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -630,46 +927,83 @@
                 }
             });
         });
-
+        
         // Navigation scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
+            
+            lastScroll = currentScroll;
         });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        
+        // Active nav link
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
                 }
             });
-        }, observerOptions);
-
-        // Observe service cards
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
         });
-
-        // Observe stat cards
-        document.querySelectorAll('.stat-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
+        
+        // Fade in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -100px 0px"
+        };
+        
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+        
+        fadeElements.forEach(el => {
+            appearOnScroll.observe(el);
+        });
+        
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navRight = document.querySelector('.nav-right');
+        
+        mobileMenu.addEventListener('click', () => {
+            navRight.style.display = navRight.style.display === 'flex' ? 'none' : 'flex';
+            navRight.style.position = 'absolute';
+            navRight.style.top = '70px';
+            navRight.style.left = '0';
+            navRight.style.right = '0';
+            navRight.style.background = 'white';
+            navRight.style.flexDirection = 'column';
+            navRight.style.padding = '20px';
+            navRight.style.boxShadow = '0 4px 20px var(--shadow)';
         });
     </script>
 </body>
